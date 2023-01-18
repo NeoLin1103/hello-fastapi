@@ -8,5 +8,11 @@
 </head>
 <body>
     <h1>All Comments</h1>
+    {% for comment_dict in comments_list %}
+        <li>
+            {{comment_dict.Name}} - {{comment_dict.Comment}}
+            <a href="/comments/{{comment_dict.id}}">內容</a>
+        </li>
+    {% endfor %}
 </body>
 </html>
